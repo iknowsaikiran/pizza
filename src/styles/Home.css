@@ -1,0 +1,28 @@
+.home {
+    display: flex;
+    justify-content: left;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: auto;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content h1 {
+    font-size: 60px;
+    font-family: cursive;
+}
+.content h2 {
+    font-size: 44px;
+    font-family: monospace;
+}
+button.btn.btn-dark {
+    margin-left: 52px;
+    width: 150px;
+    height: 50px;
+}
+

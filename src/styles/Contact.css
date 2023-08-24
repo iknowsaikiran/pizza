@@ -1,0 +1,40 @@
+.contact .contact-left {
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contact {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+}
+.contact-right {
+    display: flex;
+    flex-direction: column;
+}
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    margin-top: 85px;
+    margin-left: 148px;
+}
+h1.contact-right {
+    font-size: 50px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+}
+buuton.btn.btn-dark {
+    width: 143px;
+    justify-content: center;
+    display: flex;
+    margin-top: 15px;
+}
+.form-right.MuiBox-root.css-0 {
+    display: flex;
+    flex-direction: column;
+}
