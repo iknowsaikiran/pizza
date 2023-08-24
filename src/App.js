@@ -16,7 +16,7 @@ function App() {
   return (
     <>
        <header className="headercontent">
-         <Navbar Navitems={navbaritems}/> 
+         <Navbar/> 
        </header>
       
       <main className="maincontent">
