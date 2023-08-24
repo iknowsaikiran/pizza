@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import React, {useState} from "react";
 import ReorderIcon from '@mui/icons-material/Reorder';
 import './styles/Navbar.css'
-const Navbar=(props)=>{
+const Navbar=()=>{
     const [openLinks,setOpenLinks]=useState(false);
     const toggleNavbar=()=>{
         setOpenLinks(!openLinks);
-    }
+    };
     return(
         <div className="navbar">
         <div className="leftSide" id={openLinks ? "open" : "close"}>
