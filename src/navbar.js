@@ -1,38 +1,39 @@
-import { Link } from "react-router-dom";
-import React, {useState} from "react";
-import ReorderIcon from '@mui/icons-material/Reorder';
-import './styles/Navbar.css'
-const Navbar=()=>{
-    const [openLinks,setOpenLinks]=useState(false);
-    const toggleNavbar=()=>{
-        setOpenLinks(!openLinks);
-    };
-    return(
-        <div className="navbar">
-        <div className="leftSide" id={openLinks ? "open" : "close"}>
-          <img src="pizzaLogo.png" alt=""/>
-          <div className="hiddenLinks">
-            <Link to="/"> Home </Link>
-            <Link to="/menu"> Menu </Link>
-            <Link to="/aboutus"> About </Link>
-            <Link to="/contact"> Contact </Link>
-          </div>
-        </div>
-        <div className="rightSide">
-          <Link to="/"> Home </Link>
-          <Link to="/menu"> Menu </Link>
-          <Link to="/aboutus"> About </Link>
-          <Link to="/contact"> Contact </Link>
-          <button onClick={toggleNavbar}>
-            <ReorderIcon />
-          </button>
-        </div>
+import React, { useState } from "react";
+
+import "./styles/Navbar.css";
+import { Link, NavLink } from "react-router-dom";
+import { Padding } from "@mui/icons-material";
+
+ const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <navbar>
+      <div  className="title">
+        <img src="pizzaLogo.png" style={{width:"70px" }}/>
+        Tops pizza
       </div>
-    );
-  }
-    
-        
-
-            
-
+      <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul className={menuOpen ? "open" : ""}>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/menu">Menu</NavLink>
+        </li>
+        <li>
+          <NavLink to="/aboutus">AboutUs</NavLink>
+        </li>
+       
+        <li>
+          <NavLink to="/contact">Contact</NavLink>
+        </li>
+      </ul>
+    </navbar>
+  );
+};
 export default Navbar;

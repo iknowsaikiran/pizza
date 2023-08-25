@@ -1,102 +1,92 @@
-.navbar {
-    width: 100%;
-    height: 100px;
+.active{
+    background-color: #37393f;
+}
+
+navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #121619;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .navbar .leftSide {
-    flex: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 150px;
-  }
-  
-  .navbar .leftSide img {
-    width: 70px;
-  }
-  
-  .navbar .rightSide {
-    flex: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .navbar a {
     color: white;
+    position: sticky;
+    top: 0;
+}
+
+navbar .title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
     text-decoration: none;
-    margin: 20px;
-  }
-  
-  .navbar .rightSide button {
-    background-color: transparent;
-    border: none;
     color: white;
-    cursor: pointer;
-  }
-  
-  .navbar .rightSide svg {
-    font-size: 40px;
-  }
-  
-  .navbar #open {
-    padding-left: 0px;
-  }
-  .navbar #open img {
+}
+
+navbar ul {
+    display: flex;
+}
+
+navbar ul li {
+   list-style: none; 
+}
+
+navbar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+
+navbar ul li a:not(.active):hover {
+    background-color:#172554 ;
+}
+
+navbar .menu {
     display: none;
-  }
-  
-  .navbar #close img {
-    display: inherit;
-  }
-  
-  .navbar #open .hiddenLinks {
-    display: inherit;
-    margin-left: 30px;
-  }
-  
-  .navbar #close .hiddenLinks {
-    display: none;
-  }
-  
-  .navbar #open a {
-    width: 70px;
-    margin: 5px;
-  }
-  @media only screen and (max-width: 900px) {
-    .navbar .rightSide a {
-      width: 70px;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+navbar .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+}
+
+
+@media (max-width: 480px) {
+    navbar .menu {
+        display: flex;
     }
-    .navbar .leftSide {
-      padding-left: 50px;
+
+    navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .navbar .rightSide a {
-      display: none;
+
+    navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
     }
-  
-    .navbar .rightSide {
-      justify-content: flex-end;
-      padding-right: 50px;
+
+    navbar ul.open {
+        display: flex;
     }
-  
-    .navbar .rightSide button {
-      display: inherit;
+
+    navbar ul li {
+        width: 100%;
+        text-align: center;
     }
-  }
-  
-  @media only screen and (min-width: 600px) {
-    .navbar .rightSide button {
-      display: none;
+
+    navbar ul li a {
+        margin: 0.2rem 0.5rem;
     }
-  
-    .hiddenLinks {
-      display: none;
-    }
-  }
+}

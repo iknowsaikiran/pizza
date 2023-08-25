@@ -5,7 +5,8 @@ const Menu=()=>{
     return (
         <div className="menu">
             <h1 className="menutitle">our Menu</h1>
-            <div >{MenuList.map((menuitem,i)=>{
+            <div className="menuList">
+                {MenuList.map((menuitem,i)=>{
                 return(
                     <Menuitems 
                     key={i}
